@@ -1,5 +1,6 @@
 #Run Nmap scan on a website and store the result in a file named 'nmap_res.txt'
-
+#   Performs NMap service, OS and port scan
+# pre- requisite: python nmap module
 import nmap
 import argparse
 import socket
@@ -28,9 +29,15 @@ def scanAPort(target_host):
 
     
 
-def driver_code():
+def driver_code(host_name):
     print(colored('Running NMap scan to determine active ports and services running on them', 'green'))
-    scanAPort('boomi.com')
+    scanAPort(host_name)
 
-driver_code()
+
+parser = argparse.ArgumentParser()
+parser.add_argument('-h','--host-name', help='The host name')
+#CMD Arg parsing done
+args = vars(parser.parse_args())
+host_name = args["host_name"]
+driver_code(host_name)
     

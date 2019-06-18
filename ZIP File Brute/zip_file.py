@@ -18,9 +18,9 @@ def driver_code(zip_file, dict_file):
         check_guess = try_extract_file(zip_file, test_pass)
 
         if check_guess == True:
-            print colored("Passord found...\n It is"+ test_pass, green)
+            print colored("Passord found...\n It is"+ test_pass, 'green')
             exit(0)
-    print colored(" Could not find the password!!!",red)
+    print colored(" Could not find the password!!!",'red')
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-z','--zip-file', help='The file to be extracted')

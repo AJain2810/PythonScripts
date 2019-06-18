@@ -47,6 +47,8 @@ def getScanReport(scan_id):
  
 #Sub domian scan complete
  
+
+ 
 def write_to_file(file_name, content):
     input_file = open(file_name,'a+')
     for i in content:
