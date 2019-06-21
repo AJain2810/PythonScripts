@@ -1,7 +1,6 @@
 #   Usage: python3 port_scanner.py -h <host_name_to_be_scanned>
 #   
 
-
 import argparse
 from socket import *
 from threading import *
